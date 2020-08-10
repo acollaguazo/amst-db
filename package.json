@@ -1,0 +1,23 @@
+{
+  "name": "api-restful-nodejs",
+  "version": "1.0.0",
+  "description": "API RESTFul para realizar funciones CRUD utilizando una base de datos no relacional.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rossmpj/tutorial-nodejs.git"
+  },
+  "author": "Rosa Pincay Jiménez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rossmpj/tutorial-nodejs/issues"
+  },
+  "homepage": "https://github.com/rossmpj/tutorial-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28"
+  }
+}
