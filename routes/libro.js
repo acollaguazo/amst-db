@@ -3,5 +3,5 @@ exports.findAll = function(req, res) {
 };
 
 exports.findById = function(req, res) {
-    res.send({id:req.params.id, editor:'Franciso Porrúa', editorial:'Sudamericana', genero:'Novela', calificacion: 5});
+    res.send({id:req.params.id, editor:'Franciso Porrúaec',editorial:'Sudamericana', genero:'Novela', calificacion: 5});
 }
