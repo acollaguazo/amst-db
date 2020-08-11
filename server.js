@@ -32,7 +32,7 @@ console.log ("DBBBBBBb", db)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));*/
 
 var dbURI='mongodb+srv://user-mongodb:apirestul1@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority';
-Mangoose.connect(dbURI,function(err){    
+mongoose.connect(dbURI.toString(), function(err){    
     if(err){
     console.log('Some problem with the connection ' +err)   
     } 
