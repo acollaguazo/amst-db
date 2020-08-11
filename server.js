@@ -5,7 +5,7 @@ const app = express();
 
 connectDB();
 app.use(express.json({ extended: false }));
-app.use('/api', routes);
+app.use(require('./routes'));
 //const Port = process.env.Port || 3000;
 
 app.listen(process.env.PORT, '0.0.0.0');
