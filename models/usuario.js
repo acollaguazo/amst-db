@@ -7,7 +7,7 @@ var UsuarioModel = new Schema(
 // const usuario = new mongoose.Schema({
         cedula: {
             type: String, 
-            required: true, 
+            required: true,
             maxlength: 10, 
             unique: true
         },
