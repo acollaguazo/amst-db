@@ -1,5 +1,5 @@
-const Libro = require('../../models/libro');
-const Autor = require('../../models/autor');
+const Libro = require('../models/libro');
+const Autor = require('../models/autor');
 
 module.exports = {
     create : async (req, res) => {

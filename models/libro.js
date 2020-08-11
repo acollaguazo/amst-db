@@ -13,11 +13,11 @@ var LibroModel = new Schema(
 );
 
 // Virtual for book's URL
-LibroModel
-.virtual('url')
-.get(function () {
-  return '/catalog/book/' + this._id;
-});
+// LibroModel
+// .virtual('url')
+// .get(function () {
+//   return '/catalog/book/' + this._id;
+// });
 
 //Export model
 module.exports = mongoose.model('Libro', LibroModel);
