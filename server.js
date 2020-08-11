@@ -31,16 +31,25 @@ var db = mongoose.connection;
 console.log ("DBBBBBBb", db)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));*/
 
+var dbURI='mongodb+srv://user-mongodb:apirestul1@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority';
+Mangoose.connect(dbURI,function(err){    
+    if(err){
+    console.log('Some problem with the connection ' +err)   
+    } 
+    else {
+    console.log('The Mongoose connection is ready')  
+    }
 
+})
 
 // connect to mongoose
 // to avoid deprecation warning, provide a second argument {useNewUrlParser: true, useUnifiedTopology: true}
 // const uri = process.env.MONGODB_URI
-mongoose.connect(
-    process.env.MONGODB_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  err => {
-    console.log("mongo db connection", err);
-  }
-);
+// mongoose.connect(
+//     process.env.MONGODB_URI,
+//   { useNewUrlParser: true, useUnifiedTopology: true },
+//   err => {
+//     console.log("mongo db connection", err);
+//   }
+// );
 // user-mongodb:apirestful1@cluster0.3d32f.mongodb.net/<dbname>?retryWrites=true&w=majority
