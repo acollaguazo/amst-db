@@ -22,19 +22,25 @@ client.connect(err => {
 });*/
 
 //var mongoose = require('mongoose');
-var mongoDB = process.env.MONGODB_URI;
+
+
+/*var mongoDB = process.env.MONGODB_URI;
 // "mongodb+srv://user-mongodb:apirestul1@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 console.log ("DBBBBBBb", db)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-//connect to mongoose
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));*/
+
+
+
+// connect to mongoose
 // to avoid deprecation warning, provide a second argument {useNewUrlParser: true, useUnifiedTopology: true}
-// mongoose.connect(
-//   dbUrl,
-//   { useNewUrlParser: true, useUnifiedTopology: true },
-//   err => {
-//     console.log("mongo db connection", err);
-//   }
-// );
+// const uri = process.env.MONGODB_URI
+mongoose.connect(
+    process.env.MONGODB_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  err => {
+    console.log("mongo db connection", err);
+  }
+);
 // user-mongodb:apirestful1@cluster0.3d32f.mongodb.net/<dbname>?retryWrites=true&w=majority
