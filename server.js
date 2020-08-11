@@ -44,7 +44,10 @@ app.use(express.json({ extended: false }));
 app.use('/api/userModel', require('./api/usuario'));
 const Port = process.env.Port || 3000;
 
-app.listen(Port, () => console.log('Server started'));
+app.listen(process.env.PORT, '0.0.0.0');
+// .listen(Port, () => console.log('Server started'));
+
+
 
 // var dbURI=process.env.MONGODB_URI;
 // mongoose.connect(dbURI.toString(), function(err){    
