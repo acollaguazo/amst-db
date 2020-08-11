@@ -21,8 +21,9 @@ client.connect(err => {
   client.close();
 });*/
 
-var mongoose = require('mongoose');
-var mongoDB = "mongodb+srv://user-mongodb:apirestul1@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
+//var mongoose = require('mongoose');
+var mongoDB = process.env.MONGODB_URI;
+// "mongodb+srv://user-mongodb:apirestul1@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 console.log ("DBBBBBBb", db)
