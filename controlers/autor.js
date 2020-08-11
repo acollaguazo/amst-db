@@ -1,4 +1,4 @@
-const Autor = require('../models/autor');
+/*const Autor = require('../models/autor');
 
 module.exports = {
     create : async (req, res) =>{
@@ -24,3 +24,4 @@ module.exports = {
         res.send(user.libros);
     }
 }
+*/

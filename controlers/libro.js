@@ -1,4 +1,4 @@
-const Libro = require('../models/libro');
+/*const Libro = require('../models/libro');
 const Autor = require('../models/autor');
 
 module.exports = {
@@ -25,8 +25,8 @@ module.exports = {
 
     librosByAutor : async (req,res)=>{
         const { id } = req.params;
-        const autorBylibro = await Libro.findById(id).populate('libros');
+        const autorBylibro = await Libro.findById(id).populate('libro');
         res.send(autorBylibro);
     }
 }
-
+*/
