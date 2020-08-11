@@ -6,10 +6,11 @@ var UsuarioModel = new Schema(
     {
 // const usuario = new mongoose.Schema({
         cedula: {
+            index: true,
+            unique: true,
             type: String, 
             required: true,
-            maxlength: 10, 
-            unique: true
+            maxlength: 10
         },
         nombre: {
             type: String, 
@@ -22,11 +23,13 @@ var UsuarioModel = new Schema(
             maxlength: 100
         },
         correo: {
+            index: true,
+            unique: true,
             type: String, 
             maxlength: 50
         }
     }
 );
-
+// module.exports = mongoose.model('Usuario', UsuarioModel, 'personas');
 // module.exports = User = mongoose.model('usuario', user);
 module.exports = mongoose.model('Usuario', UsuarioModel);
