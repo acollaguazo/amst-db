@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var PrestamoModel = new Schema(
     {
-        fecha: {type: String, required: true},
+        fecha: {type: String, required: true, default: Date.now },
         id_usuario: {type: Schema.Types.ObjectId, ref: 'Usuario', required: true},
         libros: [{type: Schema.Types.ObjectId, ref: 'Libro', required: true}]
     }

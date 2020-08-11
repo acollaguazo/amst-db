@@ -5,10 +5,26 @@ var Schema = mongoose.Schema;
 var UsuarioModel = new Schema(
     {
 // const usuario = new mongoose.Schema({
-    cedula: {type: String, required: true, maxlength: 10},
-    nombre: {type: String, required: true, maxlength: 100},
-    apellido: {type: String, required: true, maxlength: 100},
-    correo: {type: String, maxlength: 50}
+        cedula: {
+            type: String, 
+            required: true, 
+            maxlength: 10, 
+            unique: true
+        },
+        nombre: {
+            type: String, 
+            required: true, 
+            maxlength: 100
+        },
+        apellido: {
+            type: String, 
+            required: true, 
+            maxlength: 100
+        },
+        correo: {
+            type: String, 
+            maxlength: 50
+        }
     }
 );
 
