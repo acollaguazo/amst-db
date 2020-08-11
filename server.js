@@ -1,9 +1,14 @@
-var express = require('express');
+/*var express = require('express'),  
+usuarios = require('./routes/usuarios');
 var mongoose = require('mongoose');
 var app = express();
 //const port = 3000
-// app.get('/libros', libros.findAll);
-// app.get('/libros/:id', libros.findById);
+app.get('/libros', usuarios.findAll);
+app.get('/libros/:id', usuarios.findById);*/
+
+
+
+
 // app.listen(port);
 // console.log('Listening on port 3000...');
 // const routes = require('./routes')
@@ -30,17 +35,27 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 console.log ("DBBBBBBb", db)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));*/
+const express = require('express');
+const connectDB = require('./database/conexion');
+const app = express();
 
-var dbURI='mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority';
-mongoose.connect(dbURI.toString(), function(err){    
-    if(err){
-    console.log('Some problem with the connection ' +err)   
-    } 
-    else {
-    console.log('The Mongoose connection is ready')  
-    }
+connectDB();
+app.use(express.json({ extended: false }));
+app.use('/api/userModel', require('./api/usuario'));
+const Port = process.env.Port || 3000;
 
-})
+app.listen(Port, () => console.log('Server started'));
+
+// var dbURI=process.env.MONGODB_URI;
+// mongoose.connect(dbURI.toString(), function(err){    
+//     if(err){
+//     console.log('Some problem with the connection ' +err)   
+//     } 
+//     else {
+//     console.log('The Mongoose connection is ready')  
+//     }
+
+// })
 
 // connect to mongoose
 // to avoid deprecation warning, provide a second argument {useNewUrlParser: true, useUnifiedTopology: true}
