@@ -4,6 +4,7 @@
   "description": "API RESTFul para realizar funciones CRUD utilizando una base de datos no relacional.",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

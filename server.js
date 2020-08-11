@@ -6,12 +6,13 @@ var app = express();
 // app.get('/libros/:id', libros.findById);
 // app.listen(port);
 // console.log('Listening on port 3000...');
-
+const routes = require('./routes')
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://user-mongodb:apirestul1@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_URI;
+// "mongodb+srv://user-mongodb:apirestul1@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
-  const collection = client.db("libreria").collection("libros");
+//   const collection = client.db("libreria").collection("libros");
   // perform actions on the collection object
   console.log("con",err)
   client.close();
