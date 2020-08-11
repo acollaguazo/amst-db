@@ -1,7 +1,7 @@
 const express = require('express');
 const router = new express.Router;
-const Autor = require('./controllers/autor');
-const Libro = require('./controllers/libro');
+const Autor = require('./controlers/autor');
+const Libro = require('./controlers/libro');
 router.get('/',(req,res)=>res.send('ok'));
 // autor routes
 router.post('/autor/create',Autor.create);
