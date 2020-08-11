@@ -3,6 +3,7 @@ const router = new express.Router;
 const Usuario = require('./api/usuario');
 const Libro = require('./api/libro');
 router.post('/usuario/crear', Usuario.crear);
+router.get('/usuario/consultar', Usuario.buscar);
 // autor routes
 // router.post('/autor/create',Autor.create);
 // router.post('/autor/find',Autor.find);
