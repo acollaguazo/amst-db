@@ -4,11 +4,12 @@ var Schema = mongoose.Schema;
 
 var LibroModel = new Schema(
   {
-    title: {type: String, required: true},
+    titulo: {type: String, required: true},
     autor: {type: Schema.Types.ObjectId, ref: 'Autor', required: true},
-    summary: {type: String, required: true},
-    isbn: {type: String, required: true},
-    //genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]
+    editor: {type: String, required: true},
+    editorial: {type: String, required: true},
+    genero: [{type: Schema.Types.ObjectId, ref: 'Genre'}],
+    calificacion: {type: Number},
   }
 );
 

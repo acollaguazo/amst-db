@@ -1,11 +1,13 @@
 const express = require('express');
 const router = new express.Router;
 const Usuario = require('./api/usuario');
+const Prestamo = require('./api/prestamo');
 const Libro = require('./api/libro');
+
+router.get('/usuarios/consultar', Usuario.buscar);
 router.post('/usuario/crear', Usuario.crear);
-router.get('/usuario/consultar', Usuario.buscar);
 // autor routes
-// router.post('/autor/create',Autor.create);
+router.post('/prestamo/crear', Prestamo.crear);
 // router.post('/autor/find',Autor.find);
 // router.post('/autor/find/post/:id', Autor.librosPorAutor);
 // libro routes

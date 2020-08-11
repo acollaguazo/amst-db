@@ -4,10 +4,9 @@ var Schema = mongoose.Schema;
 
 var AutorModel = new Schema(
   {
-    first_name: {type: String, required: true, maxlength: 100},
-    family_name: {type: String, required: true, maxlength: 100},
-    date_of_birth: {type: Date},
-    date_of_death: {type: Date},
+    nombre: {type: String, required: true, maxlength: 100},
+    apellido: {type: String, required: true, maxlength: 100},
+    edad: {type: Date}
   }
 );
 
