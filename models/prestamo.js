@@ -8,7 +8,7 @@ var PrestamoModel = new Schema(
             required: true, 
             default: Date.now 
         },
-        id_usuario: {
+        usuario: {
             type: Schema.Types.ObjectId, 
             ref: 'Usuario', 
             required: true
