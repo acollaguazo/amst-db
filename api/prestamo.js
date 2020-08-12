@@ -2,22 +2,30 @@ const Prestamo = require('../models/prestamo');
 
 module.exports = {
     crear: async (req, res) => {
-    //     prestamo = req.params;
-    //     usuario = prestamo.usuario;
-    //     libros = prestamo.libros;
         const { fecha, usuario, libros } = req.body;
-        const prestamoModel = await Prestamo.create({
-            fecha: fecha,
-            usuario: usuario,
-            libros: libros
+        let prestamo = {};
+        prestamo.fecha = fecha;
+        prestamo.usuario = usuario;
+        prestamo.libros = libros;
+        let prestamoModel = new Prestamo(prestamo);
+        prestamoModel.save((err, personaDB) => {
+            msj: libro
+            if (err) {
+                res.json({
+                    resultado: false,
+                    msj: 'No se pudo registrar la persona, ocurrió el siguiente error:',
+                    err
+                });
+            } else {
+                res.json({
+                    resultado: true,
+                    msj: 'Los datos se enviaron de forma exitosa',
+                    personaDB
+                });
+            }
         });
-        await prestamoModel.save();
-        // const libroById = await Libro.findById(libro);
-        // libroById.libros.push(prestamoModel);
-        // await libroById.save();
-        // return res.send(libroById);
-        //res.json(prestamoModel);
     },
+        
 
     // create : async (req, res) => {
     //     autor = req.params;
