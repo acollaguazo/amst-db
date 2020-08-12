@@ -1,4 +1,3 @@
-'use strict';
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
@@ -14,16 +13,12 @@ var PrestamoModel = new Schema(
             ref: 'Usuario', 
             required: true
         },
-        libros: [
-            {
-                type: Schema.Types.ObjectId, 
-                ref: 'Libro', 
-                required: true,
-                autopopulate: true
-            }
-        ]
+        libro: {
+            type: Schema.Types.ObjectId, 
+            ref: 'Libro', 
+            required: true
+        }
     }
 );
 
 module.exports = mongoose.model('Prestamo', PrestamoModel);
-Schema.plugin(require('mongoose-autopopulate'));
