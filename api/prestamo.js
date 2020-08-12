@@ -29,7 +29,7 @@ module.exports = {
         const prestamo = await Prestamo.find().populate({
             path: 'libros',
             // Get friends of friends - populate the 'friends' array for every friend
-            populate: { path: 'libros' }
+            populate: { path: 'libros',model: "Libro" }
           });
         return res.send(prestamo)
     },
