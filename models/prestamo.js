@@ -18,7 +18,8 @@ var PrestamoModel = new Schema(
             {
                 type: Schema.Types.ObjectId, 
                 ref: 'Libro', 
-                required: true
+                required: true,
+                autopopulate: true
             }
         ]
     }
