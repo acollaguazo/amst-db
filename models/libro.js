@@ -20,13 +20,11 @@ var LibroModel = new Schema(
             type: String, 
             required: true
         },
-        genero: [
-            {
-                type: Schema.Types.ObjectId, 
-                ref: 'Genero', 
-                required: false
-            }
-        ],
+        genero: {
+            type: Schema.Types.ObjectId, 
+            ref: 'Genero', 
+            required: false
+        },
         calificacion: {
             type: Number
         },

@@ -12,7 +12,7 @@ module.exports = {
         libro.editorial = editorial;
         libro.calificacion = calificacion;
         libro.autor = autor;
-        libro.genero = [genero];
+        libro.genero = genero;
         let libroModel = new Libro(libro);
         libroModel.save((err, personaDB) => {
             if (err) {
