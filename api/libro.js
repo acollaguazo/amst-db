@@ -30,7 +30,7 @@ module.exports = {
     },
 
     verTodos: async (req, res) => {
-        const libro = await Libro.find().populate("genero", "autor")
+        const libro = await Libro.find().populate("autor").populate("genero");
         return res.send(libro)
     },
 }
