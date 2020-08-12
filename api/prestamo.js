@@ -4,12 +4,12 @@ module.exports = {
     crear: async (req, res) => {
         prestamo = req.params;
         usuario = prestamo.usuario;
-        libro = prestamo.libro;
+        libros = prestamo.libros;
         const { fecha } = req.body;
         const prestamoModel = await Prestamo.create({
             fecha: fecha,
             id_usuario: usuario,
-            libros: libro
+            libros: [libro]
         });
         await prestamoModel.save();
         // const libroById = await Libro.findById(libro);
