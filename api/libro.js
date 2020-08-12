@@ -5,7 +5,7 @@ module.exports = {
         libro = req.params;
         autor = libro.autor;
         genero = libro.genero;
-        const { titulo, editor, editorial, calificacion } = req.body;
+        const { titulo, editor, editorial, calificacion, autor, genero } = req.body;
         let libro = {};
         libro.titulo = titulo;
         libro.editor = editor;
@@ -15,6 +15,7 @@ module.exports = {
         libro.genero = genero;
         let libroModel = new Libro(libro);
         libroModel.save((err, personaDB) => {
+            msj: libro
             if (err) {
                 res.json({
                     resultado: false,

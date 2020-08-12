@@ -1,15 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var LibroModel = new Schema(
-    {
+var LibroModel = new Schema({
         titulo: {
             type: String, 
-            required: true
-        },
-        autor: {
-            type: Schema.Types.ObjectId, 
-            ref: 'Autor', 
             required: true
         },
         editor: {
@@ -20,14 +14,20 @@ var LibroModel = new Schema(
             type: String, 
             required: true
         },
+        calificacion: {
+            type: Number,
+            required: false
+        },
         genero: {
             type: Schema.Types.ObjectId, 
             ref: 'Genero', 
             required: false
-        },
-        calificacion: {
-            type: Number
-        },
+        },        
+        autor: {
+            type: Schema.Types.ObjectId, 
+            ref: 'Autor', 
+            required: false
+        }
     }
 );
 
