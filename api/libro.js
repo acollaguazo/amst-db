@@ -2,9 +2,9 @@ const Libro = require('../models/libro');
 
 module.exports = {
     crear: async (req, res) => {
-        libro = req.params;
-        autor = libro.autor;
-        genero = libro.genero;
+        // libro = req.params;
+        // autor = libro.autor;
+        // genero = libro.genero;
         const { titulo, editor, editorial, calificacion, autor, genero } = req.body;
         let libro = {};
         libro.titulo = titulo;
