@@ -7,9 +7,9 @@ module.exports = {
         libro = prestamo.libro;
         const { fecha } = req.body;
         const prestamoModel = await Prestamo.create({
-            fecha,
-            id_usuario:usuario,
-            libros:libro
+            fecha: fecha,
+            id_usuario: usuario,
+            libros: libro
         });
         await prestamoModel.save();
         // const libroById = await Libro.findById(libro);
@@ -53,7 +53,7 @@ module.exports = {
     //     return res.send(userById);
     // },
 
-    buscar: async (req, res) => {
+    verTodos: async (req, res) => {
         const prestamo = await Prestamo.find()
         return res.send(prestamo)
     },

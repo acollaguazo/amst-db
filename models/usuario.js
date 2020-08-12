@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
-
 var Schema = mongoose.Schema;
 
 var UsuarioModel = new Schema(
     {
-// const usuario = new mongoose.Schema({
         cedula: {
             index: true,
             unique: true,
@@ -30,6 +28,4 @@ var UsuarioModel = new Schema(
         }
     }
 );
-// module.exports = mongoose.model('Usuario', UsuarioModel, 'personas');
-// module.exports = User = mongoose.model('usuario', user);
 module.exports = mongoose.model('Usuario', UsuarioModel);

@@ -9,8 +9,6 @@ module.exports = {
         user.apellido = apellido;
         user.correo = correo;
         let userModel = new Usuario(user);
-        // await userModel.save();
-        // res.json(userModel);
         userModel.save((err, personaDB) => {
             if (err) {
                 res.json({
@@ -28,7 +26,7 @@ module.exports = {
         });
     },
 
-    buscar: async (req, res) => {
+    verTodos: async (req, res) => {
         const user = await Usuario.find()
         return res.send(user)
     },
