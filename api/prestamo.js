@@ -26,7 +26,11 @@ module.exports = {
     },
 
     verTodos: async (req, res) => {
-        const prestamo = await Prestamo.find().populate("libros")
+        const prestamo = await Prestamo.find().populate({
+            path: 'libros',
+            // Get friends of friends - populate the 'friends' array for every friend
+            populate: { path: 'libros' }
+          });
         return res.send(prestamo)
     },
 }
