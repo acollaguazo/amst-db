@@ -1,27 +1,32 @@
-/*const Autor = require('../models/autor');
+const Autor = require('../models/autor');
 
 module.exports = {
-    create : async (req, res) =>{
-        const { first_name, family_name, date_of_birth } = req.body;
-        const user = await Autor.create({
-            first_name,
-            family_name,
-            date_of_birth
-        })
-
-        return res.send(user)
+    crear: async (req, res) => {
+        const { nombre, apellido, edad } = req.body;
+        let user = {};
+        user.nombre = nombre;
+        user.apellido = apellido;
+        user.edad = edad;
+        let userModel = new Autor(user);
+        userModel.save((err, personaDB) => {
+            if (err) {
+                res.json({
+                    resultado: false,
+                    msj: 'No se pudo registrar la persona, ocurrió el siguiente error:',
+                    err
+                });
+            } else {
+                res.json({
+                    resultado: true,
+                    msj: 'Los datos se enviaron de forma exitosa',
+                    personaDB
+                });
+            }
+        });
     },
 
-    find : async (req, res) => {
-        const user = await User.find()
+    verTodos: async (req, res) => {
+        const user = await Autor.find()
         return res.send(user)
     },
-
-    librosPorAutor : async (req, res) => {
-       const { id } = req.params;
-       const user = await Autor.findById(id).populate('libros');
-
-        res.send(user.libros);
-    }
 }
-*/
