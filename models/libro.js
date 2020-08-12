@@ -23,7 +23,7 @@ var LibroModel = new Schema(
         genero: [
             {
                 type: Schema.Types.ObjectId, 
-                ref: 'Genre', 
+                ref: 'Genero', 
                 required: false
             }
         ],
