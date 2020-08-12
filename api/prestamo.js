@@ -27,7 +27,7 @@ module.exports = {
     },
 
     verTodos: async (req, res) => {
-        const prestamo = await Prestamo.find().populate({path: 'libros', select: 'titulo' }).populate('usuario');
+        const prestamo = await Prestamo.find().populate('usuario');
         return res.send(prestamo)
     },
 }
