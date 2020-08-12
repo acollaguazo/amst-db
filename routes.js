@@ -9,16 +9,16 @@ const Genero = require('./api/genero');
 router.get('/usuarios/consultar', Usuario.verTodos);
 router.post('/usuario/crear', Usuario.crear);
 
-router.post('/autores/consultar', Autor.verTodos);
+router.get('/autores/consultar', Autor.verTodos);
 router.post('/autor/crear', Autor.crear);
 
-router.post('/generos/consultar', Genero.verTodos);
+router.get('/generos/consultar', Genero.verTodos);
 router.post('/genero/crear', Genero.crear);
 
 router.get('/libros/consultar', Libro.verTodos);
 router.post('/libro/crear', Libro.crear);
 
-router.post('/prestamos/consultar', Prestamo.verTodos);
+router.get('/prestamos/consultar', Prestamo.verTodos);
 router.post('/prestamo/crear', Prestamo.crear);
 // router.post('/autor/find',Autor.find);
 // router.post('/autor/find/post/:id', Autor.librosPorAutor);
