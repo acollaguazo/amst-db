@@ -2,14 +2,14 @@ const Prestamo = require('../models/prestamo');
 
 module.exports = {
     crear: async (req, res) => {
-        prestamo = req.params;
-        usuario = prestamo.usuario;
-        libros = prestamo.libros;
-        const { fecha } = req.body;
+    //     prestamo = req.params;
+    //     usuario = prestamo.usuario;
+    //     libros = prestamo.libros;
+        const { fecha, usuario, libros } = req.body;
         const prestamoModel = await Prestamo.create({
             fecha: fecha,
-            id_usuario: usuario,
-            libros: [libro]
+            usuario: usuario,
+            libros: libros
         });
         await prestamoModel.save();
         // const libroById = await Libro.findById(libro);
