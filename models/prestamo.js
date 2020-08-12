@@ -26,4 +26,4 @@ var PrestamoModel = new Schema(
 );
 
 module.exports = mongoose.model('Prestamo', PrestamoModel);
-PrestamoModel.plugin(require('mongoose-autopopulate'));
+Schema.plugin(require('mongoose-autopopulate'));
