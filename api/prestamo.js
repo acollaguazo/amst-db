@@ -1,4 +1,5 @@
 const Prestamo = require('../models/prestamo');
+const Libro = require('../models/libro');
 
 module.exports = {
     crear: async (req, res) => {
