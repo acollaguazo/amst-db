@@ -2,9 +2,6 @@ const Libro = require('../models/libro');
 
 module.exports = {
     crear: async (req, res) => {
-        // libro = req.params;
-        // autor = libro.autor;
-        // genero = libro.genero;
         const { titulo, editor, editorial, calificacion, autor, genero } = req.body;
         let libro = {};
         libro.titulo = titulo;
@@ -33,7 +30,7 @@ module.exports = {
     },
 
     verTodos: async (req, res) => {
-        const libro = await Libro.find()
+        const libro = await Libro.find().populate("genero", "autor")
         return res.send(libro)
     },
 }
