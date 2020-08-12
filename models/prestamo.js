@@ -13,7 +13,7 @@ var PrestamoModel = new Schema(
             ref: 'Usuario', 
             required: true
         },
-        libro: [
+        libros: [
             {
                 type: Schema.Types.ObjectId, 
                 ref: 'Libro', 
