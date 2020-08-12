@@ -23,11 +23,4 @@ var PrestamoModel = new Schema(
     }
 );
 
-// Virtual for book's URL
-// LibroModel
-// .virtual('url')
-// .get(function () {
-//   return '/catalog/book/' + this._id;
-// });
-
 module.exports = mongoose.model('Prestamo', PrestamoModel);
