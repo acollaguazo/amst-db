@@ -9,7 +9,6 @@ module.exports = {
         prestamo.libros = libros;
         let prestamoModel = new Prestamo(prestamo);
         prestamoModel.save((err, personaDB) => {
-            msj: libro
             if (err) {
                 res.json({
                     resultado: false,
