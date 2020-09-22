@@ -7,7 +7,10 @@ const Autor = require('./api/autor');
 const Genero = require('./api/genero');
 
 router.get('/usuarios/consultar', Usuario.verTodos);
+router.get('/usuario/buscar/:cedula', Usuario.buscarPorId);
 router.post('/usuario/crear', Usuario.crear);
+router.put('/usuario/modificar/:id', Usuario.modificar);
+router.delete('/usuario/eliminar/:id', Usuario.eliminar);
 
 router.get('/autores/consultar', Autor.verTodos);
 router.post('/autor/crear', Autor.crear);
@@ -20,10 +23,5 @@ router.post('/libro/crear', Libro.crear);
 
 router.get('/prestamos/consultar', Prestamo.verTodos);
 router.post('/prestamo/crear', Prestamo.crear);
-// router.post('/autor/find',Autor.find);
-// router.post('/autor/find/post/:id', Autor.librosPorAutor);
-// libro routes
-// router.post('/libro/create/:id', Libro.create);
-// router.post('/libro/populate/:id',Libro.librosByAutor);
 
 module.exports = router;

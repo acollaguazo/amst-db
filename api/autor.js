@@ -12,7 +12,7 @@ module.exports = {
             if (err) {
                 res.json({
                     resultado: false,
-                    msj: 'No se pudo registrar la persona, ocurrió el siguiente error:',
+                    msj: 'No se pudo registrar el autor',
                     err
                 });
             } else {

@@ -28,4 +28,5 @@ var UsuarioModel = new Schema(
         }
     }
 );
+
 module.exports = mongoose.model('Usuario', UsuarioModel);

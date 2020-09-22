@@ -1,5 +1,4 @@
 const Prestamo = require('../models/prestamo');
-const Libro = require('../models/libro');
 
 module.exports = {
     crear: async (req, res) => {
@@ -13,7 +12,7 @@ module.exports = {
             if (err) {
                 res.json({
                     resultado: false,
-                    msj: 'No se pudo registrar la persona, ocurrió el siguiente error:',
+                    msj: 'No se pudo registrar el préstamo',
                     err
                 });
             } else {
