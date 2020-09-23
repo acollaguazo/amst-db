@@ -13,7 +13,7 @@ router.put('/modificar_usuario/:id', Usuario.modificar);
 router.delete('/eliminar_usuario/:id', Usuario.eliminar);
 
 router.get('/libros', Libro.verTodos);
-router.get('/libros/:id', Usuario.buscarPorId);
+router.get('/libros/:id', Libro.buscarPorId);
 router.post('/libros', Libro.crear);
 router.put('/libros/:id', Libro.modificar);
 router.delete('/libros/:id', Libro.eliminar);

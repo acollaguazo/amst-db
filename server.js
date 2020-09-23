@@ -4,9 +4,10 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connectDB();
-const URI ='mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria';
+const URI = "mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
+//'mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria';
+
 //
-//"mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
 //'mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria';
 //
 
