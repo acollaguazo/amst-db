@@ -26,7 +26,7 @@ module.exports = {
         });
     },
 
-    verTodos: async (req, res) => {
+    verTodos: async (res) => {
         const user = await Usuario.find()
         return res.send(user)
     },

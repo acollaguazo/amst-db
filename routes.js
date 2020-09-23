@@ -12,14 +12,23 @@ router.post('/crear_usuario', Usuario.crear);
 router.put('/modificar_usuario/:id', Usuario.modificar);
 router.delete('/eliminar_usuario/:id', Usuario.eliminar);
 
-router.get('/autores', Autor.verTodos);
-router.post('/autor/crear', Autor.crear);
-
-router.get('/generos/consultar', Genero.verTodos);
-router.post('/genero/crear', Genero.crear);
-
 router.get('/libros', Libro.verTodos);
-router.post('/libro/crear', Libro.crear);
+router.get('/libros/:id', Usuario.buscarPorId);
+router.post('/libros', Libro.crear);
+router.put('/libros/:id', Libro.modificar);
+router.delete('/libros/:id', Libro.eliminar);
+
+router.get('/autores', Autor.verTodos);
+router.get('/autores/:id', Autor.buscarPorId);
+router.post('/autores', Autor.crear);
+router.put('/autores/:id', Autor.modificar);
+router.delete('/autores/:id', Autor.eliminar);
+
+router.get('/generos', Genero.verTodos);
+router.get('/generos/:id', Genero.buscarPorId);
+router.post('/generos', Genero.crear);
+router.put('/generos/:id', Genero.modificar);
+router.delete('/generos/:id', Genero.eliminar);
 
 router.get('/prestamos/consultar', Prestamo.verTodos);
 router.post('/prestamo/crear', Prestamo.crear);
