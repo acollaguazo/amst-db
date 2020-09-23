@@ -29,7 +29,7 @@ module.exports = {
         });
     },
 
-    verTodos: async (res) => {
+    verTodos: async (req, res) => {
         const libro = await Libro.find().populate("autor").populate("genero");
         return res.send(libro)
     },

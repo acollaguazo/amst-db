@@ -7,9 +7,7 @@ const app = express();
 const URI = "mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria?retryWrites=true&w=majority";
 //'mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria';
 
-//
-//'mongodb+srv://user-mongodb:1234@cluster0.3d32f.mongodb.net/libreria';
-//
+//herok
 
 // const connectDB = async () => {
 //     await 

@@ -23,7 +23,7 @@ module.exports = {
         });
     },
 
-    verTodos: async (res) => {
+    verTodos: async (req, res) => {
         const user = await Genero.find()
         return res.send(user)
     },
