@@ -1,10 +1,10 @@
 const express = require('express');
 const router = new express.Router;
-const Usuario = require('./api/usuario');
-const Prestamo = require('./api/prestamo');
-const Libro = require('./api/libro');
-const Autor = require('./api/autor');
-const Genero = require('./api/genero');
+const Usuario = require('./controllers/usuario');
+const Prestamo = require('./controllers/prestamo');
+const Libro = require('./controllers/libro');
+const Autor = require('./controllers/autor');
+const Genero = require('./controllers/genero');
 
 router.get('/usuarios', Usuario.verTodos);
 router.get('/buscar_usuario/:cedula', Usuario.buscarPorId);
